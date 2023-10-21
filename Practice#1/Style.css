@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: #1a1d50fd;
+}
+.Form{
+    width: 300px;
+    height: 50vh;
+    padding: 40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+}
+.Form h1{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    background: none;
+    padding:20px;
+}
+.input{
+    border:0;
+    background: none;
+    display: block;
+    margin:40px;
+    text-align: center;
+    border:2px solid #3498ab;
+    padding:14px 10px;
+    width:200px;
+    outline:none;
+    color:#fff;
+    border-radius:24px;
+    transition: 0.25s;
+    
+}
+.input:hover{
+    border:2px solid #dd0b0b;
+}
+.Submit{
+    border:0;
+    background: none;
+    display: block;
+    margin:55px;
+    text-align: center;
+    border:2px solid #21f505;
+    padding:14px 40px;
+    width:200px;
+    outline:none;
+    color:#fff;
+    border-radius:24px;
+    transition: 0.25s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.Submit:hover{
+    background-color: #21f505;
+
+}

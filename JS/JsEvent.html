@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+    <script>
+        function focusEvent() {
+            document.getElementById("txt").style.background = "aqua";
+        }
+
+        function OnmouseoverEvent() {
+            window.alert("This is Js");
+        }
+
+        function OnKeyDownEvent() {
+            document.getElementById("key");
+            window.alert("Pressed a Key");
+        }
+    </script>
+
+</head>
+<body>
+    <h1>OnFocus Event</h1>
+    <input type="text" id="txt" onfocus="focusEvent()">
+
+    <h1>OnMouse Event</h1>
+    <p onmouseover="OnmouseoverEvent()">Mouse Over Me</p>
+
+    <h1>OnKeyDown Event</h1>
+    <input type="text" id="key" onkeydown="OnKeyDownEvent()">
+
+    <p>Click The Following Button To see Effect</p>
+    <button id="btn">Click Me</button>
+    <p id="para"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", fun);
+        function fun() {
+            document.getElementById("para").innerHTML = "Hello World" + "<br>" + "Welcome to Js";
+        }
+    </script>
+
+
+    <p>SECOND BUTTON CLICK ME</p>
+    <button id="btn2">Click Me</button>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <script>
+        function fun() {
+            alert("This is 1st Function");
+        }
+
+        function fun2() {
+            document.getElementById("para2").innerHTML = "This is 2nd Function";
+        }
+
+        function fun3() {
+            document.getElementById("para3").innerHTML = "This is 3th Function";
+        }
+        var mybtn = document.getElementById("btn2");
+        mybtn.addEventListener("click", fun);
+        mybtn.addEventListener("click", fun2);
+        mybtn.addEventListener("click", fun3);
+    </script>
+
+    <p>THIRD BUTTON CLICK ME</p>
+    <button id="btn3">Click Me</button>
+    <p id="para4"></p>
+    <script>
+        function fun() {
+            btn3.style.width="50px";
+            btn3.style.height="50px";
+            btn3.style.background="lightblue";
+            btn3.style.coloe="#ffff";
+            btn3.style.font.size="20px"
+        }
+
+        function fun2() {
+            document.getElementById("para4").innerHTML="This Is 2nd Function";
+        }
+
+        function fun3() {
+            btn3.style.width="150px";
+            btn3.style.height="50px";
+            btn3.style.background="red";
+            btn3.style.coloe="#ffff";
+        }
+        var mybtn2 = document.getElementById("btn3");
+        mybtn2.addEventListener("mouseover", fun);
+        mybtn2.addEventListener("click", fun2);
+        mybtn2.addEventListener("mouseout", fun3);
+        </script>
+
+</body>
+</html>

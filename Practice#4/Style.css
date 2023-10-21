@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	background: #5887ef;
+}
+.container{
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	width: 300px;
+}
+.container input{
+	box-sizing: border-box;
+	width: 100%;
+	font-size:18px ;
+	border: none;
+	padding: 10px;
+	border-radius: 3px;
+	font-family: 'Poppins',sans-serif;
+	letter-spacing: 0.5px;
+	outline: none;
+	box-shadow: 0 5px 30px rgba(22,89,233,0.4);
+}
+::placeholder{
+	color: #9a9a9a;
+	font-weight: 400;
+
+}
+span{
+	position: absolute;
+	right: 15px;
+	transform: translate(0,-50%);
+	top: 50%;
+	cursor: pointer;
+}
+.fa{
+	font-size: 20px;
+	color: #7a797e;
+}

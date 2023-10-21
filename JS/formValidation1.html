@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function foromvalidate() {
+        var name = document.form.myname.value;
+        var pass = document.form.mypass.value;
+        var cpass = document.form.cpass.value;
+        var x = document.form.mymail.value;
+        var atposition=x.indexOf("@");
+        var dotposition=x.indexOf(".");
+        if (name == null || name == "") {
+            document.getElementById("nameid").innerHTML = "Please Enter Your Name";
+            return false;
+        }
+       
+        else if(atposition<1 || dotposition<atposition+2 || dotposition+2>x.length){
+            document.getElementById("mailid").innerHTML="Please Enter Email in Correct Format";
+        }
+
+        else if (pass.length == 0) {
+            document.getElementById("passid").innerHTML = "Please Enter Your Password";
+            return false;
+        }
+        else if (pass.length < 8) {
+            document.getElementById("passid").innerHTML = "Your Password must be 8 Character long";
+            return false;
+        }
+        if (cpass.length == 0) {
+            document.getElementById("cpassid").innerHTML = "Please Enter Your Confrim Password";;
+            return false;
+        }
+        if (pass != cpass) {
+            document.getElementById("cpassid").innerHTML = "Your Password is not matched";;
+            return false;
+        }
+        else if (pass == cpass) {
+            return true;
+        }
+    }
+    // function numbervalidate() {
+    //     var num = document.form.number.value;
+    //     if (NaN(num)) {
+    //         document.getElementById("numid").innerHTML = "Enter the Numeric Value";
+    //         return false;
+    //     }
+    //     else {
+    //         return true;
+    //     }
+    // }
+
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <form name="form" action="#" method="post" onsubmit="return foromvalidate()">
+        <label>Name:</label>
+        <input type="text" name="myname" value="" placeholder="Enter your Name"><span id="nameid"></span><br>
+
+        <label>Email:</label>
+        <input type="email" name="mymail" value="" placeholder="Enter your Email"><span id="mailid"></span><br>
+
+        <label>Password</label>
+        <input type="password" name="mypass" value="" placeholder="Enter your Passeord"><span id="passid"></span><br>
+
+        <label>Confrim-Password</label>
+        <input type="password" name="cpass" value="" placeholder="Enter your Passeord"><span id="cpassid"></span><br>
+
+        <input type="submit" value="Submit">
+
+
+        <!-- <label>Number</label>
+        <input type="text" name="number"><span id="numid"></span><br> -->
+
+    </form>
+
+</body>
+
+</html>

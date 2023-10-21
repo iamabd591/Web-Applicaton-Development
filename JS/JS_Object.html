@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Object</title>
+	<script >
+		// emp={id:1,name:"Ali",Salary:50000}
+		// document.write(emp.id+" "+ emp.name+" "+emp.Salary);
+
+		// var emp=new Object();
+		// emp.id=201;
+		// emp.name="Waqas";
+		// emp.Salary=100000;
+		//  document.write(emp.id+" "+ emp.name+" "+emp.Salary);
+
+		// function emp(id,name,Salary)
+		// {
+		// 	this.id=id;
+		// 	this.name=name;
+		// 	this.Salary=Salary;
+
+
+		// 	this.changeSalary=changeSalary;
+		// 	function changeSalary(otherSalary)
+		// 	{
+		// 		this.Salary=otherSalary;
+		// 	}
+
+		// 	this.changeId=changeId;
+		// 	function changeId(otherId)
+		// 	{
+		// 		this.id=otherId;
+		// 	}
+		// }
+		// e =new emp(1,"Abdul-Hanan Butt",150000)
+		// document.write(e.id+" "+ e.name+" "+e.Salary);
+
+		// e.changeSalary(4500000);
+		// document.write("<br>"+ e.id+" "+ e.name+" "+e.Salary);
+
+		// e.changeId(500);
+		// document.write("<br>"+ e.id+" "+ e.name+" "+e.Salary);
+
+		// var abc=[1,2,3,4,5];
+		// for(i=0; i<abc.length;i++)
+		// {
+		// 	document.write(abc[i]+"<br>");
+		// }
+
+
+		// var integer=new Array();
+		//  integer[0]=1;
+		//  integer[1]=10;
+		//  integer[2]=100;
+		//  integer[3]=1000;
+
+		//  for(i=0; i<integer.length;i++)
+		// {
+		// 	document.write(integer[i]+"<br>");
+		// }
+
+		// var char=new Array("Hanan","Waqas","Ali");
+
+		//  for(i=0; i<char.length;i++)
+		// {
+		// 	document.write(char[i]+"<br>");
+		// }
+		 
+		 ///DATE///
+//  var today=new Date();  
+// document.getElementById('txt').innerHTML=today;  
+
+// var today=new Date();
+// var h=today.getHours();
+// var m=today.getMinutes();
+// var s=today.getSeconds();
+// document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+
+
+window.onload=function()
+{
+	getTime();
+}
+function getTime()
+{  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+// add a zero in front of numbers<10  
+m=checkTime(m);  
+s=checkTime(s);  
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;  
+setTimeout(function(){getTime()},1000);  
+}  
+
+// //setInterval("getTime()",1000);//another way  
+// function checkTime(i){  
+// if (i<10){  
+//   i="0" + i;  
+//  }  
+// return i;  
+// }  
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Cookies</title>
+</head>
+<script>
+    function setcookies() {
+        // document.cookie = "Abdul Hanan Butt;expires=Sun, 20 Aug 2030 12:00:00 UTC;max - age=" + (60 * 60 * 24 * 365) + ";";
+        document.cookie="username=Duke Martin;max-age=" + (60 * 60 * 24 * 365) + ";path=/;"  
+    }
+    function getcookies() {
+        if (document.cookie.length != 0) {
+            var array = document.cookie.split("=");
+            alert("Name" + array[0] + " " + "Value" + array[1]);
+
+        }
+        else {
+            alert("cookies is not available");
+        }
+    }
+    function display() {
+        var value = document.getElementById("color").value;
+        if (value != "Select color") {
+            document.bgColor = value;
+            document.cookie = "Color=" + value;
+        }
+    }
+    window.onload = function () {
+        if (document.cookie.length != 0) {
+            var array = document.cookie.split("=");
+            document.getElementById("color").value = array[1];
+        }
+    }
+</script>
+
+<body>
+    <input type="button" value="Setcookies" onclick="setcookies()">
+    <input type="button" value="Getcookies" onclick="getcookies()">
+    <br>
+    <br>
+    <br>
+    <select id="color" onchange="display()">
+        <option value="Select color">Select color</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+    </select>
+
+</body>
+
+</html>

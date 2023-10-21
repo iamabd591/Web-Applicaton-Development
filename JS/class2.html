@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <!-- // class abc{
+        //     constructor(){
+        //         document.writeln(abc.display()+"<br>");
+        //         document.writeln(this.constructor.display());
+        //     }
+        // static display()
+        // {
+        //     return "This Is Static Fun()";
+        // }
+        // }
+        // var a=new abc();
+        ///////////////////////////////////ENCAPSULATION////////////////////////////////
+        // class student {
+        //     constructor() {
+        //         var name;
+        //         var marks;
+        //     }
+
+        //     setname(name) {
+        //         this.name = name;
+        //     }
+
+        //     setmarks(marks) {
+        //         if(marks<0 || marks>100)
+        //         {
+        //             alert("Invalid Marks");
+        //         }
+        //            else
+        //            {
+        //             this.marks=marks;
+        //            }
+
+
+        //        }
+
+        // getname()
+        // {
+        //     return this.name;
+        // }
+
+        // getmarks()
+        // {
+        //     return this.marks;
+        // }
+        //     }
+
+        // function Student(name, marks) {
+        //     var s_name = name;
+        //     var s_marks = marks;
+        //     Object.defineProperty(this, "name", {get: function () { return s_name;},set: function (s_name) { this.s_name = s_name;  }
+        //     });
+
+        //     Object.defineProperty(this, "marks", {
+        //         get: function () {
+        //             return s_marks;
+        //         },
+        //         set: function (s_marks) {
+        //             this.s_marks = s_marks;
+        //         }
+
+        //     });
+
+        // }
+        // var stud = new Student("John", 80);
+        // document.writeln(stud.name + " " + stud.marks);
+        // document.writeln("Student Name:" + std.getname() + "<br>" + "Student Marks:" + std.getmarks());
+
+    
+
+
+        // class Moment extends Date {
+        //     constructor() {
+        //         super();
+        //     }
+        // }
+        // var m = new Moment();
+        // document.writeln("Current date:")
+        // document.writeln(m.getDate() + "-" + (m.getMonth() + 1) + "-" + m.getFullYear());
+
+        ///////////////////////////////////ABSTRACTION////////////////////////////////
+        // function vehicle() {
+        //     this.vehiclename = vehiclename;
+        //     throw new console.error("You can not creat Instance of  Abstract class");
+        // }
+        // vehicle.prototype.display = function () {
+        //     return "Vehicle is:" + this.vehiclename;
+        // }
+        // function bike(vehiclename) {
+        //     this.vehiclename = vehiclename;
+        // }
+        // Bike.prototype = Object.create(Vehicle.prototype);
+        // var bike = new Bike("Honda"); -->
+    <!-- document.writeln(bike.display());  -->
+
+
+    <script>
+         ///////////////////////////////////INHERITANCE////////////////////////////////
+        // class Bike {
+        //     constructor() {
+        //         this.company = "Honda";
+        //     }
+        // }
+        // class Vehicle extends Bike {
+        //     constructor(name, price) {
+        //         super();
+        //         this.name = name;
+        //         this.price = price;
+        //     }
+        // }
+        // var v = new Vehicle("Shine", "70000");
+        // document.writeln(v.company + " " + v.name + " " + v.price);
+
+        // class comapny {
+        //     constructor() {
+        //         this.companyname = "Honda";
+        //     }
+        // }
+        // class bike extends comapny {
+        //     constructor(name, price) {
+        //         super();
+        //         this.name = name;
+        //         this.price = price;
+        //     }
+        //     setname()
+        //     {
+        //         this.name=name;
+        //     }
+        //     setprice()
+        //     {
+        //         this.price=price;
+        //     }
+
+        //     getname()
+        //     {
+        //         return this.name;
+        //     }
+        //     getprice()
+        //     {
+        //         return this.price;
+        //     }
+        // }
+        // var v = new bike("Cd 70", 100000);
+        // document.writeln(v.companyname + " " + v.getname() + " " + v.getprice());
+
+        function bike(company)
+        {
+            this.company=company;
+        }
+        bike.prototype.getCompany=function()
+        {
+            return this.company;
+        }
+
+        function vehicle(name,price)
+        {
+            this.name=name;
+            this.price=price;
+        }
+        var b=new bike("TAYOTA");
+        vehicle.prototype=bike;//bike as a parent class
+        var v =new vehicle("Civic",23456890);
+        document.writeln("Details:"+" "+v.getCompany()+" "+v.name+" "+v.price);
+
+        
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
